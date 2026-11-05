@@ -1,6 +1,6 @@
 <?php
 
-namespace Hollyit\RichEditorPlusExample\Tests;
+namespace Webwizardsusa\RichEditorPlusExample\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -13,12 +13,12 @@ use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use Hollyit\RichEditorPlus\RichEditorPlusServiceProvider;
-use Hollyit\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
 use Illuminate\Foundation\Application;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Postare\BladeMdi\BladeMdiServiceProvider;
+use Webwizardsusa\RichEditorPlus\RichEditorPlusServiceProvider;
+use Webwizardsusa\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
 
 /**
  * Boots Filament, Livewire and Rich Editor Plus around the package, without an application of its own.

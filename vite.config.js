@@ -3,7 +3,7 @@ import laravel from 'laravel-vite-plugin'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 // In a package of your own, import it from the copy Composer installs:
-// './vendor/hollyit/rich-editor-plus/vite/shared-tiptap.js'.
+// './vendor/webwizardsusa/rich-editor-plus/vite/shared-tiptap.js'.
 import { sharedTiptap } from '../rich-editor-plus/vite/shared-tiptap.js'
 
 const packageRoot = path.dirname(fileURLToPath(import.meta.url))

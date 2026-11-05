@@ -1,6 +1,6 @@
 <?php
 
-namespace Hollyit\RichEditorPlusExample\Plugins;
+namespace Webwizardsusa\RichEditorPlusExample\Plugins;
 
 /**
  * The styles a callout can have. The value is what the stored HTML holds in `data-variant` and the end of the

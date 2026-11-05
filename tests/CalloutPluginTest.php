@@ -1,12 +1,12 @@
 <?php
 
-use Hollyit\RichEditorPlus\Plugins\Core\BlockquotePlugin;
-use Hollyit\RichEditorPlus\Rendering\RichContentPlusRenderer;
-use Hollyit\RichEditorPlus\RichEditorPlus;
-use Hollyit\RichEditorPlus\Support\BlockType;
-use Hollyit\RichEditorPlusExample\Plugins\CalloutPlugin;
-use Hollyit\RichEditorPlusExample\Plugins\CalloutVariant;
-use Hollyit\RichEditorPlusExample\Tests\TestCase;
+use Webwizardsusa\RichEditorPlus\Plugins\Core\BlockquotePlugin;
+use Webwizardsusa\RichEditorPlus\Rendering\RichContentPlusRenderer;
+use Webwizardsusa\RichEditorPlus\RichEditorPlus;
+use Webwizardsusa\RichEditorPlus\Support\BlockType;
+use Webwizardsusa\RichEditorPlusExample\Plugins\CalloutPlugin;
+use Webwizardsusa\RichEditorPlusExample\Plugins\CalloutVariant;
+use Webwizardsusa\RichEditorPlusExample\Tests\TestCase;
 
 uses(TestCase::class);
 

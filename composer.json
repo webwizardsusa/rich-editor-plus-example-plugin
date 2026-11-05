@@ -1,5 +1,5 @@
 {
-    "name": "hollyit/rich-editor-plus-example",
+    "name": "webwizardsusa/rich-editor-plus-example",
     "description": "An example Rich Editor Plus plugin package: a keyboard key mark and a callout block, with their own JS module.",
     "keywords": [
         "laravel",
@@ -15,17 +15,17 @@
     ],
     "require": {
         "php": "^8.3",
-        "hollyit/rich-editor-plus": "*",
+        "webwizardsusa/rich-editor-plus": "*",
         "spatie/laravel-package-tools": "^1.92"
     },
     "autoload": {
         "psr-4": {
-            "Hollyit\\RichEditorPlusExample\\": "src/"
+            "Webwizardsusa\\RichEditorPlusExample\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hollyit\\RichEditorPlusExample\\Tests\\": "tests/"
+            "Webwizardsusa\\RichEditorPlusExample\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hollyit\\RichEditorPlusExample\\RichEditorPlusExampleServiceProvider"
+                "Webwizardsusa\\RichEditorPlusExample\\RichEditorPlusExampleServiceProvider"
             ]
         }
     },

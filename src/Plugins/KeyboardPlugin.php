@@ -1,12 +1,12 @@
 <?php
 
-namespace Hollyit\RichEditorPlusExample\Plugins;
+namespace Webwizardsusa\RichEditorPlusExample\Plugins;
 
-use Hollyit\RichEditorPlus\Content\MarkSpec;
-use Hollyit\RichEditorPlus\Plugins\Plugin;
-use Hollyit\RichEditorPlus\Support\JsExtension;
-use Hollyit\RichEditorPlus\Support\Tool;
-use Hollyit\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
+use Webwizardsusa\RichEditorPlus\Content\MarkSpec;
+use Webwizardsusa\RichEditorPlus\Plugins\Plugin;
+use Webwizardsusa\RichEditorPlus\Support\JsExtension;
+use Webwizardsusa\RichEditorPlus\Support\Tool;
+use Webwizardsusa\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
 
 /**
  * A mark: text shown as a keyboard key, stored as `<kbd>`.

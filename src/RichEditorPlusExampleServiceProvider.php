@@ -1,10 +1,10 @@
 <?php
 
-namespace Hollyit\RichEditorPlusExample;
+namespace Webwizardsusa\RichEditorPlusExample;
 
-use Hollyit\RichEditorPlus\Support\RegistersPluginAssets;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Webwizardsusa\RichEditorPlus\Support\RegistersPluginAssets;
 
 /**
  * Registers the package's translations and its built JS module and stylesheet. `RegistersPluginAssets` finds
@@ -28,7 +28,7 @@ class RichEditorPlusExampleServiceProvider extends PackageServiceProvider
 
     public static function assetPackage(): string
     {
-        return 'hollyit/rich-editor-plus-example';
+        return 'webwizardsusa/rich-editor-plus-example';
     }
 
     public static function assetId(): string

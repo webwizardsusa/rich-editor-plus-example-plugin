@@ -1,16 +1,16 @@
 <?php
 
-namespace Hollyit\RichEditorPlusExample\Plugins;
+namespace Webwizardsusa\RichEditorPlusExample\Plugins;
 
 use DOMElement;
-use Hollyit\RichEditorPlus\Content\NodeSpec;
-use Hollyit\RichEditorPlus\Plugins\Plugin;
-use Hollyit\RichEditorPlus\Support\BlockType;
-use Hollyit\RichEditorPlus\Support\JsExtension;
-use Hollyit\RichEditorPlus\Support\Tool;
-use Hollyit\RichEditorPlus\Support\ToolMenuItem;
-use Hollyit\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
 use InvalidArgumentException;
+use Webwizardsusa\RichEditorPlus\Content\NodeSpec;
+use Webwizardsusa\RichEditorPlus\Plugins\Plugin;
+use Webwizardsusa\RichEditorPlus\Support\BlockType;
+use Webwizardsusa\RichEditorPlus\Support\JsExtension;
+use Webwizardsusa\RichEditorPlus\Support\Tool;
+use Webwizardsusa\RichEditorPlus\Support\ToolMenuItem;
+use Webwizardsusa\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
 
 /**
  * A block node: a callout box that holds other blocks, such as paragraphs and lists, stored as

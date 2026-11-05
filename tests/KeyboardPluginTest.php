@@ -1,10 +1,10 @@
 <?php
 
-use Hollyit\RichEditorPlus\Plugins\Core\CodePlugin;
-use Hollyit\RichEditorPlus\Rendering\RichContentPlusRenderer;
-use Hollyit\RichEditorPlusExample\Plugins\KeyboardPlugin;
-use Hollyit\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
-use Hollyit\RichEditorPlusExample\Tests\TestCase;
+use Webwizardsusa\RichEditorPlus\Plugins\Core\CodePlugin;
+use Webwizardsusa\RichEditorPlus\Rendering\RichContentPlusRenderer;
+use Webwizardsusa\RichEditorPlusExample\Plugins\KeyboardPlugin;
+use Webwizardsusa\RichEditorPlusExample\RichEditorPlusExampleServiceProvider;
+use Webwizardsusa\RichEditorPlusExample\Tests\TestCase;
 
 uses(TestCase::class);
 
