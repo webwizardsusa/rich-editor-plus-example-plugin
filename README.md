@@ -1,7 +1,7 @@
 # Rich Editor Plus example plugin
 
 A working plugin package to copy when you write your own plugin for
-[Rich Editor Plus](../rich-editor-plus/README.md). It adds two plugins that use their own JS module:
+[Rich Editor Plus](https://github.com/webwizardsusa/filament-rich-editor-plus). It adds two plugins that use their own JS module:
 
 - **`KeyboardPlugin`**: a mark. Text shown as a keyboard key, stored as `<kbd>`, with a toolbar button and a shortcut.
 - **`CalloutPlugin`**: a block node. A box that holds paragraphs, lists and other blocks, in an info, warning or
@@ -88,7 +88,7 @@ and doesn't contain `Duplicate use of selection JSON ID`: TipTap and ProseMirror
    change the dev server's port and app root to suit your setup.
 5. The CSS only styles the editor. Pages that show rendered content need their own styles for your markup.
 
-The [Writing a plugin with JavaScript](../rich-editor-plus/README.md#writing-a-plugin-with-javascript) section of the
+The [Writing a plugin with JavaScript](https://github.com/webwizardsusa/filament-rich-editor-plus#writing-a-plugin-with-javascript) section of the
 editor's README covers the rest of the API, such as asking the server from the editor and accepting uploads.
 
 ## Tests

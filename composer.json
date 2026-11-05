@@ -1,16 +1,26 @@
 {
-    "name": "webwizardsusa/rich-editor-plus-example",
+    "name": "webwizardsusa/rich-editor-plus-example-plugin",
     "description": "An example Rich Editor Plus plugin package: a keyboard key mark and a callout block, with their own JS module.",
     "keywords": [
         "laravel",
+        "filamentphp",
         "filament",
+        "filament-plugin",
         "tiptap",
-        "rich-editor"
+        "rich-editor",
+        "webwizardsusa"
     ],
+    "homepage": "https://github.com/webwizardsusa/rich-editor-plus-example-plugin",
+    "support": {
+        "issues": "https://github.com/webwizardsusa/rich-editor-plus-example-plugin/issues",
+        "source": "https://github.com/webwizardsusa/rich-editor-plus-example-plugin"
+    },
     "license": "MIT",
     "authors": [
         {
-            "name": "Jamie Holly"
+            "name": "Jamie Holly",
+            "email": "jamie@webwizardsusa.com",
+            "role": "Developer"
         }
     ],
     "require": {
