@@ -1,0 +1,53 @@
+{
+    "name": "hollyit/rich-editor-plus-example",
+    "description": "An example Rich Editor Plus plugin package: a keyboard key mark and a callout block, with their own JS module.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "tiptap",
+        "rich-editor"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jamie Holly"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "hollyit/rich-editor-plus": "*",
+        "spatie/laravel-package-tools": "^1.92"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hollyit\\RichEditorPlusExample\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hollyit\\RichEditorPlusExample\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hollyit\\RichEditorPlusExample\\RichEditorPlusExampleServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^5.2",
+        "pestphp/pest-plugin-laravel": "^5.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
