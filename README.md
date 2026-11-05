@@ -25,7 +25,7 @@ Both are on the playground pages of this repo's app, at the end of the sample co
 ## What goes where
 
 ```
-composer.json                 Requires webwizardsusa/rich-editor-plus, registers the service provider
+composer.json                 Requires webwizardsusa/filament-rich-editor-plus, registers the service provider
 package.json                  Vite and the TipTap packages, as dev dependencies only
 vite.config.js                `vite build` writes dist/; `vite` runs the dev server
 src/
@@ -84,7 +84,7 @@ and doesn't contain `Duplicate use of selection JSON ID`: TipTap and ProseMirror
 2. Give `assetPackage()` your Composer package name, and `assetId()` a unique id. Use the same id for `assetId` in
    `vite.config.js`, which names the built files and the hot file.
 3. Give each plugin an id under your own prefix, such as `acme/callout`, and use it in `registerExtension()`.
-4. In `vite.config.js`, import `sharedTiptap()` from `./vendor/webwizardsusa/rich-editor-plus/vite/shared-tiptap.js`, and
+4. In `vite.config.js`, import `sharedTiptap()` from `./vendor/webwizardsusa/filament-rich-editor-plus/vite/shared-tiptap.js`, and
    change the dev server's port and app root to suit your setup.
 5. The CSS only styles the editor. Pages that show rendered content need their own styles for your markup.
 
