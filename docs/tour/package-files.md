@@ -14,7 +14,7 @@ package discovery:
     "name": "webwizardsusa/rich-editor-plus-example-plugin",
     "require": {
         "php": "^8.3",
-        "webwizardsusa/filament-rich-editor-plus": "*",
+        "webwizardsusa/filament-rich-editor-plus": "^0.1.0 || ^0.2.0 || dev-main",
         "spatie/laravel-package-tools": "^1.92"
     },
     "autoload": {
@@ -32,8 +32,9 @@ The dev dependencies are `orchestra/testbench`, `pestphp/pest` and `pestphp/pest
 [tests](../testing.md). `composer test` runs Pest.
 
 > [!TIP]
-> The example requires the editor at `*` because it lives in the editor's workbench. Give your package a real
-> constraint, such as `^0.2`, so an incompatible editor version can't be installed beside it.
+> The constraint names each editor minor version the example works with, so an incompatible editor version can't be
+> installed beside it. `dev-main` lets the editor's workbench install it alongside the editor's own checkout. Give
+> your package the versions you build and test against.
 
 ## package.json
 
@@ -108,7 +109,7 @@ class RichEditorPlusExampleServiceProvider extends PackageServiceProvider
 
     public static function assetPackage(): string
     {
-        return 'webwizardsusa/rich-editor-plus-example';
+        return 'webwizardsusa/rich-editor-plus-example-plugin';
     }
 
     public static function assetId(): string
@@ -135,10 +136,10 @@ The dev server counts as running when the app environment is `local` and `public
 If neither the dev server nor the published asset is available, `moduleUrl()` throws a `LogicException` that tells
 you to start the dev server, or to build and run `php artisan filament:assets`.
 
-> [!WARNING]
-> `assetPackage()` must return your Composer package name. The example's value,
-> `webwizardsusa/rich-editor-plus-example`, differs from its package name, `webwizardsusa/rich-editor-plus-example-plugin`.
-> It works because the trait uses the same value for registering and looking up, but use your real name.
+> [!IMPORTANT]
+> `assetPackage()` must return your Composer package name, as the example's does. `filament:assets` publishes the
+> assets under it, to `public/js/webwizardsusa/rich-editor-plus-example-plugin/` and
+> `public/css/webwizardsusa/rich-editor-plus-example-plugin/` for the example.
 
 The trait's protected methods can be overridden when your layout differs: `packagePath()`, `assetsDistPath()` (the
 `dist/` folder), `devServerEntry()` (the entry the dev server serves, `resources/js/index.js` by default) and

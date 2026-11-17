@@ -48,16 +48,10 @@ editor shares and uses an export the editor lacks, it warns in the console and n
 
 ### Finding sharedTiptap
 
-The plugin ships with Rich Editor Plus, in its `vite/shared-tiptap.js`. The example imports it from the editor's
-checkout next to it in the workbench:
-
-```js
-import { sharedTiptap } from '../rich-editor-plus/vite/shared-tiptap.js'
-```
-
-In your own package, import it from the copy Composer installs. That is the package's own `vendor/` when you run
-`composer install` inside the package (as CI does), or the host app's `vendor/` when the package sits in the app's
-`packages/` folder. The code block package looks in both places, which you can copy:
+The plugin ships with Rich Editor Plus, in its `vite/shared-tiptap.js`. The example imports it from the first copy it
+finds: the package's own `vendor/` when you run `composer install` inside the package (as CI does), the host app's
+`vendor/` when the package sits in the app's `packages/` folder, or the editor's checkout next to it in the editor's
+workbench:
 
 ```js
 import { existsSync } from 'node:fs'
@@ -69,6 +63,7 @@ const packageRoot = path.dirname(fileURLToPath(import.meta.url))
 const sharedTiptapPath = [
     path.join(packageRoot, 'vendor/webwizardsusa/filament-rich-editor-plus/vite/shared-tiptap.js'),
     path.join(packageRoot, '../../vendor/webwizardsusa/filament-rich-editor-plus/vite/shared-tiptap.js'),
+    path.join(packageRoot, '../rich-editor-plus/vite/shared-tiptap.js'),
 ].find((candidate) => existsSync(candidate))
 
 if (!sharedTiptapPath) {
@@ -77,6 +72,8 @@ if (!sharedTiptapPath) {
 
 const { sharedTiptap } = await import(pathToFileURL(sharedTiptapPath).href)
 ```
+
+Outside the editor's workbench, the last candidate never matches, so your own package can drop it.
 
 ## Build mode
 

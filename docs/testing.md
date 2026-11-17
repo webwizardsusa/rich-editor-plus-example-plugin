@@ -156,6 +156,12 @@ Change `rich-editor-plus-example::` in the pattern to your namespace. The patter
 quotes. Keys built at runtime, such as `"…variants.{$this->value}"` in `CalloutVariant`, aren't checked; the block type
 labels test covers those.
 
+## The asset package name
+
+`tests/ServiceProviderTest.php` checks that `assetPackage()` returns the `name` from `composer.json`, and that
+`moduleUrl()` points into `public/js/{assetPackage}/`, where `filament:assets` publishes the module. It reads the name
+from `composer.json`, so it keeps working after you rename the package, and fails if you forget `assetPackage()`.
+
 ## The JavaScript side
 
 The example has no JavaScript tests. The JS extensions are thin, and the commands and attributes they share with PHP

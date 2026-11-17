@@ -36,8 +36,9 @@ In `composer.json`:
 - `autoload.psr-4`: `Webwizardsusa\\RichEditorPlusExample\\` becomes your namespace, such as
   `Acme\\RichEditorPlusHighlight\\`. Do the same for `autoload-dev` (the tests namespace).
 - `extra.laravel.providers`: point it at your renamed service provider.
-- `require`: keep `webwizardsusa/filament-rich-editor-plus`, but give it a real constraint instead of `*`, such as the
-  minor version you build against.
+- `require`: keep `webwizardsusa/filament-rich-editor-plus`, with a constraint naming the editor versions you build
+  and test against. The example's `^0.1.0 || ^0.2.0 || dev-main` is a fair start; drop `dev-main` if your package
+  isn't developed in the editor's workbench.
 
 Then change the `namespace` and `use` lines in every file under `src/` and `tests/`, and rename
 `RichEditorPlusExampleServiceProvider.php` and its class.
@@ -95,11 +96,6 @@ The two static methods matter:
 - **`assetId()`** names the built files (`dist/{assetId}.js`, `dist/{assetId}.css`) and the dev server's hot file
   (`public/{assetId}.hot`). Pick an id no other package uses.
 
-> [!WARNING]
-> The example's `assetPackage()` returns `webwizardsusa/rich-editor-plus-example`, which is not its Composer package
-> name (`webwizardsusa/rich-editor-plus-example-plugin`). The assets still load, because the same value is used to
-> register and to look them up, but don't copy that mismatch: return your real package name.
-
 `->name()` sets the translation namespace, so labels become `rich-editor-plus-highlight::plugins.*`. Update every
 `__('rich-editor-plus-example::…')` call in `src/` to the new namespace. The
 [translation test](testing.md#translation-keys) looks for the prefix too, so update its pattern.
@@ -114,8 +110,9 @@ const assetId = 'rich-editor-plus-highlight'
 
 While you are in the file:
 
-- Change the `sharedTiptap` import so it finds the copy of Rich Editor Plus your setup has. The example imports it from
-  the editor's checkout next to it; see [Finding sharedTiptap](tour/vite-config.md#finding-sharedtiptap).
+- The `sharedTiptap` lookup already finds Rich Editor Plus in the package's own `vendor/` or the host app's. Outside
+  the editor's workbench you can drop its last candidate, the editor's checkout next to it; see
+  [Finding sharedTiptap](tour/vite-config.md#finding-sharedtiptap).
 - Change `server.port` to a port no other dev server in the app uses. The example uses `5179`.
 
 ## 5. Give each plugin its own id
@@ -162,8 +159,7 @@ it is what Composer installs. See [Building and HMR](building.md) for the dev se
 
 | Example value | Where | Becomes |
 |---|---|---|
-| `webwizardsusa/rich-editor-plus-example-plugin` | `composer.json` `name` | your Composer package name |
-| `webwizardsusa/rich-editor-plus-example` | `assetPackage()` | your Composer package name |
+| `webwizardsusa/rich-editor-plus-example-plugin` | `composer.json` `name`, `assetPackage()` | your Composer package name |
 | `Webwizardsusa\RichEditorPlusExample` | `composer.json`, `src/`, `tests/` | your namespace |
 | `RichEditorPlusExampleServiceProvider` | class, file, `extra.laravel.providers`, `tests/TestCase.php` | your provider |
 | `rich-editor-plus-example` | `->name()`, `assetId()`, `vite.config.js`, `__()` keys, translation test | your id |
