@@ -9,3 +9,6 @@
 /package.json       export-ignore
 /phpunit.xml        export-ignore
 /vite.config.js     export-ignore
+/.github            export-ignore
+/release-please-config.json   export-ignore
+/.release-please-manifest.json export-ignore
