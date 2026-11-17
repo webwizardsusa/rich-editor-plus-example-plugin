@@ -30,8 +30,8 @@ RichEditorPlus::make('content')->addPlugins([
 
 ## Documentation
 
-The documentation, including a step-by-step guide to creating your own plugin package from this one, is at
-[https://DOCS_SITE_URL/docs/rich-editor-plus-example](https://DOCS_SITE_URL/docs/rich-editor-plus-example).
+The documentation, including a step-by-step guide to creating your own plugin package from this one, is in the
+[`docs` folder](https://github.com/webwizardsusa/rich-editor-plus-example-plugin/tree/main/docs).
 
 ## License
 
