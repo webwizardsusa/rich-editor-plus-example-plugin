@@ -28,7 +28,7 @@ class RichEditorPlusExampleServiceProvider extends PackageServiceProvider
 
     public static function assetPackage(): string
     {
-        return 'webwizardsusa/rich-editor-plus-example';
+        return 'webwizardsusa/rich-editor-plus-example-plugin';
     }
 
     public static function assetId(): string
