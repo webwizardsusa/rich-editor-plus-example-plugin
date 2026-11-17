@@ -1,7 +1,7 @@
 ---
 title: Trying the example
 weight: 20
-description: Install the example plugin in an app to see the keyboard mark and the callout block at work before you copy them.
+description: Clone the example plugin into an app to see the keyboard mark and the callout block at work before you copy them.
 ---
 
 Install the example in an app that already uses Rich Editor Plus, so you can see both plugins in an editor before you
@@ -10,12 +10,18 @@ copy them. You don't need it installed to create your own package from it: you c
 
 ## Install the package
 
+The example isn't on Packagist. Clone it into your app and point Composer at the checkout with a
+[path repository](https://getcomposer.org/doc/05-repositories.md#path):
+
 ```bash
-composer require webwizardsusa/rich-editor-plus-example-plugin
+git clone https://github.com/webwizardsusa/rich-editor-plus-example-plugin.git packages/rich-editor-plus-example
+composer config repositories.rich-editor-plus-example path packages/rich-editor-plus-example
+composer require webwizardsusa/rich-editor-plus-example-plugin:@dev
 php artisan filament:assets
 ```
 
-The service provider is discovered automatically. `filament:assets` publishes the built JavaScript module and
+The built assets are committed in `dist/`, so there is nothing to build. The service provider is discovered
+automatically. `filament:assets` publishes the built JavaScript module and
 stylesheet from the package's `dist/` folder into `public/`, where the editor loads them from. Run it again whenever
 you update the package.
 
