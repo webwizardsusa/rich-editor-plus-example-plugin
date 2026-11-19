@@ -33,6 +33,10 @@ RichEditorPlus::make('content')->addPlugins([
 The documentation, including a step-by-step guide to creating your own plugin package from this one, is in the
 [`docs` folder](https://github.com/webwizardsusa/rich-editor-plus-example-plugin/tree/main/docs).
 
+## About Us
+
+This package is developed and maintained by [WebWizardsUSA](https://webwizardsusa.com/), a top rated web development agency on Upwork.
+
 ## License
 
 The MIT License (MIT). See [LICENSE.md](LICENSE.md).
