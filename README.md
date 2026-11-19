@@ -1,5 +1,8 @@
 # Rich Editor Plus example plugin
 
+> **Under active development.** This package is still changing and may not be ready for production use yet. Until
+> 1.0, a minor release can include breaking changes, so check the changelog before you upgrade.
+
 A working plugin package to copy when you write your own plugin for
 [Rich Editor Plus](https://github.com/webwizardsusa/filament-rich-editor-plus). It adds a keyboard key mark
 (`KeyboardPlugin`, stored as `<kbd>`) and a callout block (`CalloutPlugin`, a box that holds other blocks in an info,
